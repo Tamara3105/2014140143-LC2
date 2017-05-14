@@ -1,4 +1,5 @@
-﻿using _2014140143_ENT.IRepositories;
+﻿using _2014140143_ENT.Entities;
+using _2014140143_ENT.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace _2014140143_PER.Repositories
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+   public class TipoEvaluacionRepository : Repository <TipoEvaluacion>, ITipoEvaluacionRepository
     {
+
     }
 }

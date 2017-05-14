@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2014140143_ENT.IRepositories
 {
-    interface IRepository
-    {
+    public interface IRepository <TEntity> where TEntity : class
+     {
     }
 }
