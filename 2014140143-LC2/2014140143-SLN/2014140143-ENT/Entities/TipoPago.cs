@@ -9,5 +9,15 @@ namespace _2014140143_ENT.Entities
   public  class TipoPago
     {
         public int TipoPagoId { get; set; }
+
+        public string FormaPago { get; set; }
+        public TipoPago()
+        {
+
+        }
+        public TipoPago(string tipoPago)
+        {
+            FormaPago = tipoPago;
+        }
     }
 }
