@@ -70,6 +70,11 @@
     <Compile Include="EntityTypeConfigurations\TrabajadorConfigurations.cs" />
     <Compile Include="EntityTypeConfigurations\UbigeoConfigurations.cs" />
     <Compile Include="EntityTypeConfigurations\VentaConfigurations.cs" />
+    <Compile Include="Migrations\201705150213074_InitialModel.cs" />
+    <Compile Include="Migrations\201705150213074_InitialModel.Designer.cs">
+      <DependentUpon>201705150213074_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AdministradorEquipoRepository.cs" />
     <Compile Include="Repositories\AdministradorLineaRepository.cs" />
@@ -104,6 +109,11 @@
       <Project>{89d469d2-70ef-4218-9f94-48b7759e7952}</Project>
       <Name>2014140143-ENT</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705150213074_InitialModel.resx">
+      <DependentUpon>201705150213074_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
