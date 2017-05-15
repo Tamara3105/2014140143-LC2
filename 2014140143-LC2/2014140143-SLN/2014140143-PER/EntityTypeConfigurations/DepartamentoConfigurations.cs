@@ -15,6 +15,7 @@ namespace _2014140143_PER.EntityTypeConfigurations
             //Table Configuration
             ToTable("Departamento");
             HasKey(dp => dp.DepartamentoId);
+            
 
             //Relationships Configurations
 

@@ -28,6 +28,5 @@ namespace _2014140143_ENT.Entities
             get { return _nombreDistrito; }
             set { _nombreDistrito = value; }
         }
-
     }
 }

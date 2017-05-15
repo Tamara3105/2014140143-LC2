@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace _2014140143_ENT.Entities
 {
-   public class Ubigeo
+    public class Ubigeo
     {
         public int UbigeoId { get; set; }
+
 
         private List<Departamento> _Departamento;
         private List<Provincia> _Provincia;
@@ -41,7 +42,7 @@ namespace _2014140143_ENT.Entities
             Departamento = departamento;
             Provincia = provincia;
             Distrito = distrito;
-        }
 
+        }
     }
 }

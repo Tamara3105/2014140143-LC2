@@ -10,27 +10,15 @@ namespace _2014140143_ENT.Entities
     {
         public int ProvinciaId { get; set; }
 
-        private List<Distrito> _Distrito;
-        int _codProvincia;
-        String _nomProvincia;
-        public Provincia(int codDistrito, int codProvincia, String nomProvincia)
-        {
-            _codProvincia = codDistrito;
-            _nomProvincia = nomProvincia;
+        public string Name { get; set; }
 
-            _Distrito = new List<Distrito>(codDistrito);
-        }
-        public int CodigoProvincia
+        public List<Ubigeo> Ubigeos { get; set; }
+
+        public Provincia()
         {
-            get { return _codProvincia; }
-            set { _codProvincia = value; }
+            Ubigeos = new List<Ubigeo>();
         }
-        public String NombreProvincia
-        {
-            get { return _nomProvincia; }
-            set { _nomProvincia = value; }
-        }
-        public Distrito CodigoDistrito { get; set; }
+
 
     }
 }

@@ -31,5 +31,6 @@ namespace _2014140143_ENT.Entities
             set { _nomDepartamento = value; }
         }
         public Provincia CodProvincia { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace _2014140143_PER.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
+        
     }
 }

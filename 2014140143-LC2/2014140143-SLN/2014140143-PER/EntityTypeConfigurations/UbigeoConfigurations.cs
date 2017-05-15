@@ -16,11 +16,11 @@ namespace _2014140143_PER.EntityTypeConfigurations
             ToTable("Ubigeo");
             HasKey(ug => ug.UbigeoId);
 
+         
 
             //Relationships Configurations
 
-            
-
+           
 
         }
     }

@@ -8,5 +8,7 @@ namespace _2014140143_ENT.IRepositories
 {
     public interface IRepository <TEntity> where TEntity : class
      {
+       
+
     }
 }
