@@ -19,6 +19,8 @@ namespace _2014140143_PER.EntityTypeConfigurations
 
             //Relationships Configurations
 
+            
+
 
         }
     }
