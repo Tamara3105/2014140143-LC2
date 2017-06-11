@@ -10,5 +10,8 @@ namespace _2014140143_PER.Repositories
 {
   public  class DireccionRepository : Repository<Direccion> , IDireccionRepository
     {
+        public DireccionRepository(_2014140143DbContext context) : base(context)
+        {
+        }
     }
 }

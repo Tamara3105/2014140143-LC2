@@ -1,0 +1,58 @@
+﻿@model IEnumerable<_2014140143_ENT.Entities.Evaluacion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroEvaluacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.documento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaEvaluacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoEvaluacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEvaluacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroEvaluacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.documento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaEvaluacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoEvaluacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEvaluacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EvaluacionId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EvaluacionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EvaluacionId })
+        </td>
+    </tr>
+}
+
+</table>

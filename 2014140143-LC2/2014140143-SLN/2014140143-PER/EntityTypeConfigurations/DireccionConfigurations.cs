@@ -17,7 +17,7 @@ namespace _2014140143_PER.EntityTypeConfigurations
             HasKey(di => di.DireccionId);
 
             //Relationships Configurations
-
+            HasRequired(ug => ug.Ubigeos).WithMany(dr => dr.Direccion).HasForeignKey(ug => ug.UbigeoId);
 
         }
     }

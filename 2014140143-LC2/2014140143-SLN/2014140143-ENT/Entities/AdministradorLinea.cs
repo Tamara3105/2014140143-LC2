@@ -10,16 +10,17 @@ namespace _2014140143_ENT.Entities
     {
         public int AdministradorLineaId { get; set; }
 
-        public List<LineaTelefonica> Lineas { get; set; }
+        public int numeroTelefonico { get; set; }
+        public DateTime fecha { get; set; }
+        public string estadoLinea { get; set; }
+
+        public LineaTelefonica LineaTelefonicas { get; set; }
+        public int LineaTelefonicaId { get; set; }
 
         public AdministradorLinea()
         {
-            Lineas = new List<LineaTelefonica>();
+            LineaTelefonicas = new LineaTelefonica();
         }
 
-        public void AgregarLinea(string numero)
-        {
-            Lineas.Add(new LineaTelefonica(numero));
-        }
     }
 }

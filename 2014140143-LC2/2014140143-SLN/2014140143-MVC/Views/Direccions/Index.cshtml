@@ -1,0 +1,52 @@
+﻿@model IEnumerable<_2014140143_ENT.Entities.Direccion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CentroAtencion.nombreCeAtencion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ubigeos.codUbigeo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codigoDireccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcionDireccion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CentroAtencion.nombreCeAtencion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ubigeos.codUbigeo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigoDireccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionDireccion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DireccionId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DireccionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DireccionId })
+        </td>
+    </tr>
+}
+
+</table>

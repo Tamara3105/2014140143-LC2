@@ -10,13 +10,19 @@ namespace _2014140143_ENT.Entities
     {
         public int ProvinciaId { get; set; }
 
-        public string Name { get; set; }
+        //public string codigoProvincia { get; set; }
+        public string nombreProvincia { get; set; }
 
-        public List<Ubigeo> Ubigeos { get; set; }
+        public Distrito Distritos { get; set; }
+        //public int DistritoId { get; set; }
+        public ICollection<Ubigeo> Ubigeo { get; set; }
+        public ICollection<Departamento> Departamento { get; set; }
+
+        //public ICollection<Departamento> Departamento { get; set; }
 
         public Provincia()
         {
-            Ubigeos = new List<Ubigeo>();
+            Distritos = new Distrito();
         }
 
 

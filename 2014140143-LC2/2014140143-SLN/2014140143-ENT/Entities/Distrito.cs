@@ -10,23 +10,9 @@ namespace _2014140143_ENT.Entities
     {
         public int DistritoId { get; set; }
 
-        int _codigoDistrito;
-        String _nombreDistrito;
-
-        public Distrito(int codigoDistrito, String nombreDistrito)
-        {
-            _codigoDistrito = codigoDistrito;
-            _nombreDistrito = nombreDistrito;
-        }
-        public int CodigoDistrito
-        {
-            get { return _codigoDistrito; }
-            set { _codigoDistrito = value; }
-        }
-        public String NombreDistrito
-        {
-            get { return _nombreDistrito; }
-            set { _nombreDistrito = value; }
-        }
+        public string codigoDistrito { get; set; }
+        public string nombreDistrito { get; set; }
+        public ICollection<Provincia> Provincia { get; set; }
+        public ICollection<Ubigeo> Ubigeo { get; set; }
     }
 }

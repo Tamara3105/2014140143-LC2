@@ -10,5 +10,8 @@ namespace _2014140143_PER.Repositories
 {
     public class AdministradorEquipoRepository :Repository<AdministradorEquipo>, IAdministradorEquipoRepository
     {
+        public AdministradorEquipoRepository(_2014140143DbContext context) : base(context)
+        {
+        }
     }
 }

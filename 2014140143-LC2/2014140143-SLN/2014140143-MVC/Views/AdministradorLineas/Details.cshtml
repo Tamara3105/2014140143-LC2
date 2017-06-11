@@ -1,0 +1,51 @@
+﻿@model _2014140143_ENT.Entities.AdministradorLinea
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AdministradorLinea</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LineaTelefonicas.codigoLinea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineaTelefonicas.codigoLinea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroTelefonico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroTelefonico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estadoLinea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoLinea)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AdministradorLineaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

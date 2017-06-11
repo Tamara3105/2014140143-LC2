@@ -1,0 +1,58 @@
+﻿@model IEnumerable<_2014140143_ENT.Entities.AdministradorEquipo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EquipoCelulars.marcaEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modalidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stockDisponible)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EquipoCelulars.marcaEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modalidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stockDisponible)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AdministradorEquipoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AdministradorEquipoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AdministradorEquipoId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -8,41 +8,30 @@ namespace _2014140143_ENT.Entities
 {
     public class Ubigeo
     {
+
         public int UbigeoId { get; set; }
 
+        public string codUbigeo { get; set; }
 
-        private List<Departamento> _Departamento;
-        private List<Provincia> _Provincia;
-        private List<Distrito> _Distrito;
+        public Distrito Distritos { get; set; }
+        public Provincia Provincias { get; set; }
+        public Departamento Departamentos { get; set; }
 
-        int _codUbigeo;
-        public int CodigoUbigeo
+        //public int DistritoId { get; set; }
+        //public int  ProvinciaId { get; set; }
+        //public int  DepartamentoId { get; set; }
+        public ICollection<Direccion> Direccion { get; set; }
+
+        public Ubigeo()
         {
-            get { return _codUbigeo; }
-            set { _codUbigeo = value; }
-        }
-        public List<Departamento> Departamento
-        {
-            get { return _Departamento; }
-            set { _Departamento = value; }
-        }
-        public List<Provincia> Provincia
-        {
-            get { return _Provincia; }
-            set { _Provincia = value; }
-        }
-        public List<Distrito> Distrito
-        {
-            get { return _Distrito; }
-            set { _Distrito = value; }
-        }
-        public Ubigeo(int codUbigeo, List<Departamento> departamento, List<Provincia> provincia, List<Distrito> distrito)
-        {
-            CodigoUbigeo = codUbigeo;
-            Departamento = departamento;
-            Provincia = provincia;
-            Distrito = distrito;
 
         }
+        public Ubigeo(Distrito distrito, Provincia provincia, Departamento departamento)
+        {
+            Distritos = distrito;
+            Provincias = provincia;
+            Departamentos = departamento;
+        }
+
     }
 }

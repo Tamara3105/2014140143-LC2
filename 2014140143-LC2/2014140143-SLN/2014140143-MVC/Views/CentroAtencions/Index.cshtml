@@ -1,0 +1,46 @@
+﻿@model IEnumerable<_2014140143_ENT.Entities.CentroAtencion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Evaluacion.documento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreCeAtencion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evaluacion.documento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreCeAtencion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CentroAtencionId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CentroAtencionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CentroAtencionId })
+        </td>
+    </tr>
+}
+
+</table>

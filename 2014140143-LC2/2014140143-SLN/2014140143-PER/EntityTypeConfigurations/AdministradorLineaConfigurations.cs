@@ -17,7 +17,7 @@ namespace _2014140143_PER.EntityTypeConfigurations
             HasKey(al => al.AdministradorLineaId);
 
             //Relationships Configurations
-
+            HasRequired(lt => lt.LineaTelefonicas).WithMany(al => al.AdministradorLinea).HasForeignKey(lt => lt.LineaTelefonicaId);
 
         }
     }

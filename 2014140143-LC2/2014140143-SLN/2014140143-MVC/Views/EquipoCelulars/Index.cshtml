@@ -1,0 +1,58 @@
+﻿@model IEnumerable<_2014140143_ENT.Entities.EquipoCelular>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.marcaEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modeloEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.colorEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imei)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.marcaEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modeloEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.colorEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imei)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EquipoCelularId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EquipoCelularId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EquipoCelularId })
+        </td>
+    </tr>
+}
+
+</table>

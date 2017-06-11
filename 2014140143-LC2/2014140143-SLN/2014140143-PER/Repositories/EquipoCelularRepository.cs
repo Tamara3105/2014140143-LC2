@@ -10,5 +10,8 @@ namespace _2014140143_PER.Repositories
 {
    public class EquipoCelularRepository : Repository <EquipoCelular>, IEquipoCelularRepository
     {
+        public EquipoCelularRepository(_2014140143DbContext context) : base(context)
+        {
+        }
     }
 }

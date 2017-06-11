@@ -10,27 +10,17 @@ namespace _2014140143_ENT.Entities
     {
         public int DepartamentoId { get; set; }
 
-        private List<Provincia> _Provincia;
-        int _codDepartamento;
-        String _nomDepartamento;
-        public Departamento(int codProvincia, int codDepartamento, String nomDepartamento)
-        {
-            _codDepartamento = codDepartamento;
-            _nomDepartamento = nomDepartamento;
+        public string codigoDepartamento { get; set; }
+        public string nombreDepartamento { get; set; }
 
-            _Provincia = new List<Provincia>(codProvincia);
-        }
-        public int CodigoDepartamento
+        public Provincia Provincias { get; set; }
+        //public int ProvinciaId { get; set; }
+        public ICollection<Ubigeo> Ubigeo { get; set; }
+
+        public Departamento()
         {
-            get { return _codDepartamento; }
-            set { _codDepartamento = value; }
+            Provincias = new Provincia();
         }
-        public String NombreDepartamento
-        {
-            get { return _nomDepartamento; }
-            set { _nomDepartamento = value; }
-        }
-        public Provincia CodProvincia { get; set; }
 
     }
 }

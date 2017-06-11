@@ -8,28 +8,18 @@ namespace _2014140143_ENT.Entities
 {
     public class CentroAtencion
     {
+
         public int CentroAtencionId { get; set; }
 
-        private List<Direccion> _Direccion;
-        int _codCentroAtencion;
-        String _nomCentroAtencion;
-        public CentroAtencion(int codDireccion, int codCentroAtencion, String nomCentroAtencion)
-        {
-            _Direccion = new List<Direccion>(codDireccion);
+        public string nombreCeAtencion { get; set; }
 
-            _codCentroAtencion = codCentroAtencion;
-            _nomCentroAtencion = nomCentroAtencion;
-        }
-        public int CodigoCentroAtencion
+        public Direccion Direccions { get; set; }
+        public int DireccionId { get; set; }
+        public Evaluacion Evaluacion { get; set; }
+
+        public CentroAtencion()
         {
-            get { return _codCentroAtencion; }
-            set { _codCentroAtencion = value; }
+            Direccions = new Direccion();
         }
-        public String NombreCentroAtencion
-        {
-            get { return _nomCentroAtencion; }
-            set { _nomCentroAtencion = value; }
-        }
-        public int CodDireccion { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace _2014140143_PER.EntityTypeConfigurations
             HasKey(ca => ca.CentroAtencionId);
 
             //Relationships Configurations
-
+            HasRequired(di => di.Direccions).WithRequiredPrincipal(di => di.CentroAtencion);
 
         }
     }

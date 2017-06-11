@@ -1,0 +1,64 @@
+﻿@model IEnumerable<_2014140143_ENT.Entities.Trabajador>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codigoTrabajador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreTrabajador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apPaternoTrabajador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apMaternoTrabajador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dniTrabajador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoTrabajadors)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigoTrabajador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreTrabajador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apPaternoTrabajador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apMaternoTrabajador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dniTrabajador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoTrabajadors)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TrabajadorId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TrabajadorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TrabajadorId })
+        </td>
+    </tr>
+}
+
+</table>

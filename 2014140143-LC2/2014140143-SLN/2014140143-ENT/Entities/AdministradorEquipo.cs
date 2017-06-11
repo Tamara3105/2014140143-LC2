@@ -10,22 +10,17 @@ namespace _2014140143_ENT.Entities
     {
         public int AdministradorEquipoId { get; set; }
 
-        private List<EquipoCelular> _Equipos;
+        public string modalidad { get; set; }
+        public DateTime fecha { get; set; }
+        public int cantidad { get; set; }
+        public string stockDisponible { get; set; }
+
+        public EquipoCelular EquipoCelulars { get; set; }
+        public int EquipoCelularId { get; set; }
 
         public AdministradorEquipo()
         {
-            Equipos = new List<EquipoCelular>();
-        }
-
-        public List<EquipoCelular> Equipos
-        {
-            get { return _Equipos; }
-            private set { _Equipos = value; }
-        }
-
-        public void AgregarEquipo(EquipoCelular equipo)
-        {
-            Equipos.Add(equipo);
+            EquipoCelulars = new EquipoCelular();
         }
     }
 }

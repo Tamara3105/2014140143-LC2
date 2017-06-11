@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _2014140143_ENT.Enumerables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,62 +9,40 @@ namespace _2014140143_ENT.Entities
 {
    public class Evaluacion
     {
+
         public int EvaluacionId { get; set; }
 
-        int _NumDocumento;
-        String _TipoDocumento;
-        String _FecNacimiento;
+        public int numeroEvaluacion { get; set; }
+        public string documento { get; set; }
+        public DateTime fechaEvaluacion { get; set; }
 
-        private EstadoEvaluacion _EstadoEvaluacion;
-        private TipoEvaluacion _TipoEvaluacion;
-        private List<Cliente> _Cliente;
-        private List<Plan> _Plan;
-        private List<EquipoCelular> _EquipoCelular;
-        private List<LineaTelefonica> _LineaTelefonica;
+        public CentroAtencion CentroAtencion { get; set; }
+        public Trabajador Trabajador { get; set; }
+        //public int TrabajadorId { get; set; }
+        public Cliente Cliente { get; set; }
+        //public int ClienteId { get; set; }
+        public Plan Plans { get; set; }
+        // public int PlanId { get; set; }
+        public EquipoCelular EquipoCelular { get; set; }
+        // public int EquipoCelularId { get; set; }
+        public LineaTelefonica LineaTelefonica { get; set; }
+        //public int  LineaTelefonicaId { get; set; }
+
+        public EstadoEvaluacion EstadoEvaluacion { get; set; }
+        public TipoEvaluacion TipoEvaluacion { get; set; }
+        public ICollection<Venta> Venta { get; set; }
+
         public Evaluacion()
         {
-            _EstadoEvaluacion = new EstadoEvaluacion();
-            _TipoEvaluacion = new TipoEvaluacion();
-            _EquipoCelular = new List<EquipoCelular>();
+            TipoEvaluacion = new TipoEvaluacion();
+            EstadoEvaluacion = new EstadoEvaluacion();
+            EquipoCelular = new EquipoCelular();
         }
-        public Evaluacion(int numDocumento, String tipoDocumento, String fecNacimiento, List<Cliente> cliente, List<Plan> plan, List<LineaTelefonica> lineaTelefonica)
+        public Evaluacion(Plan plan, LineaTelefonica lineaTelefonica, Cliente cliente)
         {
-            NumeroDocumento = numDocumento;
-            TipoDocumento = tipoDocumento;
-            FecNacimiento = fecNacimiento;
+            Plans = plan;
+            LineaTelefonica = lineaTelefonica;
             Cliente = cliente;
-            Plan = plan;
         }
-        public String TipoDocumento
-        {
-            get { return _TipoDocumento; }
-            set { _TipoDocumento = value; }
-        }
-        public String FecNacimiento
-        {
-            get { return _FecNacimiento; }
-            set { _FecNacimiento = value; }
-        }
-        public int NumeroDocumento
-        {
-            get { return _NumDocumento; }
-            set { _NumDocumento = value; }
-        }
-        public List<LineaTelefonica> LineaTelefonica
-        {
-            get { return _LineaTelefonica; }
-            set { _LineaTelefonica = value; }
-        }
-        public List<Cliente> Cliente
-        {
-            get { return _Cliente; }
-            set { _Cliente = value; }
-        }
-        public List<Plan> Plan
-        {
-            get { return _Plan; }
-            set { _Plan = value; }
-        }
-
     }
 }

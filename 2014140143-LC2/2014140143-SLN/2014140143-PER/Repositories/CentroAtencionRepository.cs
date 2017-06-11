@@ -10,5 +10,9 @@ namespace _2014140143_PER.Repositories
 {
     public  class CentroAtencionRepository : Repository<CentroAtencion> , ICentroAtencionRepository
     {
+        public CentroAtencionRepository(_2014140143DbContext context) : base(context)
+        {
+        }
     }
+
 }

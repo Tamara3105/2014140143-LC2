@@ -1,0 +1,57 @@
+﻿@model _2014140143_ENT.Entities.LineaTelefonica
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LineaTelefonica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.codigoLinea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigoLinea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.iccid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.iccid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.costoMinuto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.costoMinuto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPlans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPlans)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

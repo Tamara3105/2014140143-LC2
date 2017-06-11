@@ -1,0 +1,43 @@
+﻿@model _2014140143_ENT.Entities.Contrato
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contrato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plazoContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plazoContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.formaContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.formaContrato)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContratoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

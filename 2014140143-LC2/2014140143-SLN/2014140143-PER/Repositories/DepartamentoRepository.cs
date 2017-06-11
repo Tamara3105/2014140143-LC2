@@ -10,5 +10,8 @@ namespace _2014140143_PER.Repositories
 {
   public  class DepartamentoRepository : Repository<Departamento> , IDepartamentoRepository
     {
+        public DepartamentoRepository(_2014140143DbContext context) : base(context)
+        {
+        }
     }
 }

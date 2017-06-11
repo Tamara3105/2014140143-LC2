@@ -1,0 +1,58 @@
+﻿@model IEnumerable<_2014140143_ENT.Entities.Plan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codigoPlan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.topeConsumo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cargoFijo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.caracteristicaPlan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPlans)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigoPlan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.topeConsumo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cargoFijo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.caracteristicaPlan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPlans)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlanId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlanId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlanId })
+        </td>
+    </tr>
+}
+
+</table>

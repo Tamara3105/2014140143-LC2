@@ -40,6 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntitiesDTO\AdministradorEquipoDTO.cs" />
+    <Compile Include="EntitiesDTO\AdministradorLineaDTO.cs" />
+    <Compile Include="EntitiesDTO\CentroAtencionDTO.cs" />
+    <Compile Include="EntitiesDTO\ClienteDTO.cs" />
+    <Compile Include="EntitiesDTO\ContratoDTO.cs" />
+    <Compile Include="EntitiesDTO\DepartamentoDTO.cs" />
+    <Compile Include="EntitiesDTO\DistritoDTO.cs" />
+    <Compile Include="EntitiesDTO\EquipoCelularDTO.cs" />
+    <Compile Include="EntitiesDTO\EvaluacionDTO.cs" />
+    <Compile Include="EntitiesDTO\LineaTelefonicaDTO.cs" />
+    <Compile Include="EntitiesDTO\ProvinciaDTO.cs" />
+    <Compile Include="EntitiesDTO\TrabajadorDTO.cs" />
+    <Compile Include="EntitiesDTO\UbigeoDTO.cs" />
+    <Compile Include="EntitiesDTO\VentaDTO.cs" />
     <Compile Include="Entities\AdministradorEquipo.cs" />
     <Compile Include="Entities\AdministradorLinea.cs" />
     <Compile Include="Entities\CentroAtencion.cs" />
@@ -49,19 +63,19 @@
     <Compile Include="Entities\Direccion.cs" />
     <Compile Include="Entities\Distrito.cs" />
     <Compile Include="Entities\EquipoCelular.cs" />
-    <Compile Include="Entities\EstadoEvaluacion.cs" />
     <Compile Include="Entities\Evaluacion.cs" />
     <Compile Include="Entities\LineaTelefonica.cs" />
     <Compile Include="Entities\Plan.cs" />
     <Compile Include="Entities\Provincia.cs" />
-    <Compile Include="Entities\TipoEvaluacion.cs" />
-    <Compile Include="Entities\TipoLinea.cs" />
-    <Compile Include="Entities\TipoPago.cs" />
-    <Compile Include="Entities\TipoPlan.cs" />
-    <Compile Include="Entities\TipoTrabajador.cs" />
     <Compile Include="Entities\Trabajador.cs" />
     <Compile Include="Entities\Ubigeo.cs" />
     <Compile Include="Entities\Venta.cs" />
+    <Compile Include="Enumerables\EstadoEvaluacion.cs" />
+    <Compile Include="Enumerables\TipoEvaluacion.cs" />
+    <Compile Include="Enumerables\TipoLinea.cs" />
+    <Compile Include="Enumerables\TipoPago.cs" />
+    <Compile Include="Enumerables\TipoPlan.cs" />
+    <Compile Include="Enumerables\TipoTrabajador.cs" />
     <Compile Include="IRepositories\IAdministradorEquipoRepository.cs" />
     <Compile Include="IRepositories\IAdministradorLineaRepository.cs" />
     <Compile Include="IRepositories\ICentroAtencionRepository.cs" />
@@ -71,19 +85,14 @@
     <Compile Include="IRepositories\IDireccionRepository.cs" />
     <Compile Include="IRepositories\IDistritoRepository.cs" />
     <Compile Include="IRepositories\IEquipoCelularRepository.cs" />
-    <Compile Include="IRepositories\IEstadoEvaluacionRepository.cs" />
     <Compile Include="IRepositories\IEvaluacionRepository.cs" />
     <Compile Include="IRepositories\ILineaTelefonicaRepository.cs" />
     <Compile Include="IRepositories\IPlanRepository.cs" />
     <Compile Include="IRepositories\IProvinciaRepository.cs" />
     <Compile Include="IRepositories\IRepository.cs" />
-    <Compile Include="IRepositories\ITipoEvaluacionRepository.cs" />
-    <Compile Include="IRepositories\ITipoLineaRepository.cs" />
-    <Compile Include="IRepositories\ITipoPagoRepository.cs" />
-    <Compile Include="IRepositories\ITipoPlanRepository.cs" />
-    <Compile Include="IRepositories\ITipoTrabajadorRepository.cs" />
     <Compile Include="IRepositories\ITrabajadorRepository.cs" />
     <Compile Include="IRepositories\IUbigeoRepository.cs" />
+    <Compile Include="IRepositories\IUnityOfWork.cs" />
     <Compile Include="IRepositories\IVentaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

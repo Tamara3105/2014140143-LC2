@@ -1,0 +1,67 @@
+﻿@model _2014140143_ENT.Entities.Trabajador
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Trabajador</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.codigoTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigoTrabajador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreTrabajador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apPaternoTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apPaternoTrabajador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apMaternoTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apMaternoTrabajador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dniTrabajador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dniTrabajador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoTrabajadors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoTrabajadors)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TrabajadorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

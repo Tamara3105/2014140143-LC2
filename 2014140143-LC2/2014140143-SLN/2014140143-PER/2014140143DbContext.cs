@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace _2014140143_PER
 {
-    class _2014140143DbContext : DbContext
+       public class _2014140143DbContext : DbContext
     {
         public DbSet<AdministradorEquipo> AdministradorEquipos { get; set; }
         public DbSet<AdministradorLinea> AdministrarLineas { get; set; }
@@ -20,19 +20,16 @@ namespace _2014140143_PER
         public DbSet<Direccion> Direccions { get; set; }
         public DbSet<Distrito> Distritos { get; set; }
         public DbSet<EquipoCelular> EquipoCelulars { get; set; }
-        public DbSet<EstadoEvaluacion> EstadoEvaluacions { get; set; }
+        
         public DbSet<Evaluacion> Evaluacions { get; set; }
         public DbSet<LineaTelefonica> LineaTelefonicas { get; set; }
         public DbSet<Plan> Plans { get; set; }
         public DbSet<Provincia> Provincias { get; set; }
-        public DbSet<TipoEvaluacion> TipoEvaluacions { get; set; }
-        public DbSet<TipoLinea> TipoLineas { get; set; }
-        public DbSet<TipoPago> TipoPagos { get; set; }
-        public DbSet<TipoTrabajador> TipoTrabajadors { get; set; }
+        
         public DbSet<Trabajador> Trabajadors { get; set; }
         public DbSet<Ubigeo> Ubigeos { get; set; }
         public DbSet<Venta> Ventas { get; set; }
-        public DbSet<TipoPlan> TipoPlans { get; set; }
+     
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -45,19 +42,16 @@ namespace _2014140143_PER
             modelBuilder.Configurations.Add(new DireccionConfigurations());
             modelBuilder.Configurations.Add(new DistritoConfigurations());
             modelBuilder.Configurations.Add(new EquipoCelularConfigurations());
-            modelBuilder.Configurations.Add(new EstadoEvaluacionConfigurations());
+           
             modelBuilder.Configurations.Add(new EvaluacionConfigurations());
             modelBuilder.Configurations.Add(new LineaTelefonicaConfigurations());
             modelBuilder.Configurations.Add(new PlanConfigurations());
             modelBuilder.Configurations.Add(new ProvinciaConfigurations());
-            modelBuilder.Configurations.Add(new TipoEvaluacionConfigurations());
-            modelBuilder.Configurations.Add(new TipoLineaConfigurations());
-            modelBuilder.Configurations.Add(new TipoPagoConfigurations());
-            modelBuilder.Configurations.Add(new TipoTrabajadorConfigurations());
+          
             modelBuilder.Configurations.Add(new TrabajadorConfigurations());
             modelBuilder.Configurations.Add(new UbigeoConfigurations());
             modelBuilder.Configurations.Add(new VentaConfigurations());
-            modelBuilder.Configurations.Add(new TipoPlanConfigurations());
+           
 
 
             base.OnModelCreating(modelBuilder);

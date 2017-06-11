@@ -8,62 +8,15 @@ namespace _2014140143_ENT.Entities
 {
    public class EquipoCelular
     {
+
         public int EquipoCelularId { get; set; }
 
-        int _CodigoCelular;
-        String _Marca;
-        String _Modelo;
-        String _Imei;
-        String _Color;
-        Double _Precio;
-        int _Stock;
-
-        public EquipoCelular(int codigoCelular, String marca, String modelo, String imei, String color, Double precio, int stock)
-        {
-            CodigoCelular = codigoCelular;
-            Marca = marca;
-            Modelo = modelo;
-            Modelo = modelo;
-            Imei = imei;
-            Color = color;
-            Precio = precio;
-            Stock = stock;
-        }
-        public int CodigoCelular
-        {
-            get { return _CodigoCelular; }
-            set { _CodigoCelular = value; }
-        }
-        public String Marca
-        {
-            get { return _Marca; }
-            set { _Marca = value; }
-        }
-        public String Modelo
-        {
-            get { return _Modelo; }
-            set { _Modelo = value; }
-        }
-        public String Imei
-        {
-            get { return _Imei; }
-            set { _Imei = value; }
-        }
-        public String Color
-        {
-            get { return _Color; }
-            set { _Color = value; }
-        }
-        public Double Precio
-        {
-            get { return _Precio; }
-            set { _Precio = value; }
-        }
-        public int Stock
-        {
-            get { return _Stock; }
-            set { _Stock = value; }
-        }
-
+        public string marcaEquipo { get; set; }
+        public string modeloEquipo { get; set; }
+        public string colorEquipo { get; set; }
+        public string imei { get; set; }
+        public double precio { get; set; }
+        public ICollection<AdministradorEquipo> AdministradorEquipo { get; set; }
+        public ICollection<Evaluacion> Evaluacion { get; set; }
     }
 }
